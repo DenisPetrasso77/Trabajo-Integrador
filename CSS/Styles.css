@@ -1,0 +1,542 @@
+:root {
+    --Primario: #e67e22 ;
+    --PrimarioOScuro: #d35400 ;
+    --Secundario: #f4d03f ;
+    --SecundarioOscuro: #d4ac0d  ;
+    --Blanco: #FFF;
+    --Negro: #000;
+
+    --FuentePrincipal: "Staatliches", cursive;
+    
+
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 65.5%;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+  /**Globales*/
+
+  body {
+    background-color: var(--Primario);
+    font-size: 1.6rem;
+    line-height: 1.5;
+  }
+
+  p {
+    font-size: 1.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--Blanco);
+  }
+
+  h2 {
+    color: var(--Secundario);
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+  a{
+     text-decoration: none;
+
+  }
+  img {
+   width: 100%;
+  }
+  .contenedor {
+    max-width: 120rem;/**1200px**/
+    margin: 0 auto;
+  }
+
+  h1,h2,h3 {
+    text-align: center;
+    color: var(--Secundario);
+    font-family: var(--FuentePrincipal);
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 3.5rem;
+  }
+  h3 {
+    font-size: 2.4rem;
+  }
+/** header**/
+.header {
+    display: flex;
+    justify-content: center;
+}
+
+.header__logo{
+    margin: 3rem 0;
+}
+.footer{
+
+background-color: var(--PrimarioOScuro);
+padding: 1rem 0;
+margin-top: 2rem;
+
+
+}
+
+.footer__texto{
+font-family: var(--FuentePrincipal);
+text-align: center;
+font-size: 2.2rem;
+}
+
+.navegacion {
+    background-color: var(--PrimarioOScuro);
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+
+}
+.navegacion__enlace{
+ font-family: var(--FuentePrincipal);
+ color: var(--Blanco);
+ font-size: 3rem;
+}
+
+.navegacion__enlace--activo,
+.navegacion__enlace:hover {
+    color: var(--Secundario);
+
+}
+
+/** Grid**/
+.grid {
+ display: grid;
+ grid-template-columns: repeat(2, 1fr);
+gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .grid {
+      grid-template-columns: repeat(3, 1fr);
+
+    }
+}
+
+
+/**Productos**/
+
+.producto {
+background-color: var(--PrimarioOScuro);
+padding: 1rem;
+}
+
+
+.producto__nombre{
+font-size: 3rem;
+}
+
+.producto__precio{
+    font-size: 2.8rem;
+    color: var(--Secundario);
+}
+
+.producto__nombre, .producto__precio {
+font-family: var(--FuentePrincipal);
+margin: 1rem;
+text-align: center;
+line-height: 1.2;
+
+}
+
+
+
+.grafico {
+min-height: 30rem;
+grid-column: 1 / 3;
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+.grafico--camisas {
+ grid-row: 2 / 3;
+ 
+ background-image: url(../img/grafico1.jpg);
+}
+.grafico--node {
+  background-image: url(../img/grafico2.jpg);
+ 
+  grid-row: 8 / 9;
+}
+
+@media (min-width: 768px) {
+  .grafico--node {
+
+    grid-row: 5 / 6;
+    grid-column: 2 / 4;
+  }  
+}
+
+/**Nosotros**/
+
+.nosotros {
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+}
+
+@media (min-width: 768px) {
+  .nosotros{
+    
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 2rem;
+    
+    }
+    
+}
+
+.nosotros__imagen {
+  grid-row: 1 / 2;
+ 
+  }
+
+@media (min-width: 768px) {
+  .nosotros__imagen {
+    grid-column:  2 / 3;
+    width: 100%;
+    }
+  }    
+/**Bloques**/
+
+  .bloques{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 2 rem;
+
+  }
+@media (min-width: 768px) {
+  .bloques{
+    grid-template-columns: repeat(4,1fr);
+
+  }
+}
+
+.bloque {
+  text-align: center;
+}
+
+.bloque__titulo{
+  margin: 0;
+}
+
+/**Pagina Producto**/
+
+@media (min-width: 768px) {
+    .camisa {
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      column-gap: 2rem;
+    } 
+}
+
+.formulario {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos se ajusten si el espacio no es suficiente */
+  gap: 2rem;
+  width: 50%; /* Reduce el ancho al 50% del contenedor */
+  margin: 0 auto; /* Centra horizontalmente */
+}
+
+.formulario__campo {
+  border: 1rem solid var(--PrimarioOScuro);
+  background-color: transparent;
+  color: var(--Blanco);
+  font-size: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 1rem;
+  appearance: none;
+  flex: 1 1 calc(50% - 2rem); /* Cada campo ocupa la mitad del ancho disponible menos el espacio del gap */
+}
+
+
+.formulario__submit{
+ 
+  background-color: var(--Secundario);
+  border: none;
+  font-size: 2rem;
+  font-family: var(--FuentePrincipal);
+  padding: 2rem;
+  transition: background-color .3s ease;
+  grid-column: 1 / 3;
+
+}
+
+.formulario__submit:hover {
+  cursor: pointer;
+  background-color: var(--SecundarioOscuro);
+}
+
+/** Contacto**/
+
+.contacto {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 30px;
+  background-color:var(--PrimarioOScuro);
+  margin: 20px auto;
+  width: 90%;
+  max-width: 600px;
+  border-radius: 10px;
+}
+
+.contacto h2 {
+  margin-bottom: 20px;
+  font-size: rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  text-align: left;
+}
+
+input, textarea {
+  padding: 10px;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+}
+
+button {
+  padding: 10px;
+  font-size: 1.2rem;
+  color: #e76f51;
+  background-color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #f1faee;
+}
+
+.producto__boton {
+  background-color: var(--Secundario);
+  color: var(--PrimarioOScuro);
+  font-family: var(--FuentePrincipal);
+  font-size: 2rem;
+  border: none;
+  padding: 1rem 2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin: 1rem auto;
+  display: block;
+}
+
+.producto__boton:hover {
+  background-color: var(--SecundarioOscuro);
+  transform: scale(1.05);
+}
+
+.producto__boton:active {
+  transform: scale(0.95);
+}
+
+.producto:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+
+
+/* Estilo para el contenedor principal del carrito */
+.carrito {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 15px;
+  width: 250px; /* Más pequeño */
+  position: fixed; /* Para que se quede fijo en la pantalla */
+  right: 20px; /* Lo mueve a la derecha */
+  top: 20px; /* Un poco de margen desde la parte superior */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+}
+
+/* Estilo para el título del carrito */
+.carrito h2 {
+  text-align: left; /* Alineamos a la izquierda */
+  color: #333;
+  font-size: 20px; /* Hacemos el texto un poco más pequeño */
+  margin-bottom: 15px;
+}
+
+.carrito h2 i {
+  margin-right: 8px; /* Espaciado entre el ícono y el texto */
+  color: var(--PrimarioOScuro); /* Color para el ícono */
+}
+
+/* Estilo para la lista de productos */
+.lista-carrito {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 15px;
+}
+
+.lista-carrito li {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 8px;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+/* Estilo para el total del carrito */
+.total-carrito {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+/* Estilo para el botón de vaciar el carrito */
+.btn-vaciar {
+  width: 100%;
+  padding: 8px;
+  background-color: var(--PrimarioOScuro);
+  border: none;
+  color: white;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-vaciar:hover {
+  background-color: #FF5733;
+}
+
+/* Agregar algo de estilo a los elementos de la lista */
+.lista-carrito li span {
+  font-size: 12px;
+  color: #888;
+}
+/* Estilo para el botón de finalizar compra */
+.btn-finalizar {
+  width: 100%;
+  padding: 10px;
+  background-color: #28a745; /* Un verde para indicar éxito */
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px; /* Separación entre los botones */
+}
+
+.btn-finalizar:hover {
+  background-color: #218838;
+}
+
+/* Estilo general para el modal */
+.modal {
+  display: none; /* Oculto por defecto */
+  position: fixed;
+  z-index: 1000; /* Asegura que esté por encima de otros elementos */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* Permite el scroll si el contenido es demasiado grande */
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+}
+
+/* Contenido del modal */
+.modal-content {
+  background-color: #fff;
+  margin: 15% auto; /* Centrado vertical */
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 500px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease-in-out; /* Animación de entrada */
+}
+
+/* Botón de cerrar */
+.cerrar {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.cerrar:hover,
+.cerrar:focus {
+  color: #000;
+  text-decoration: none;
+}
+
+/* Botón de cerrar modal */
+.btn-cerrar {
+  background-color: var(--PrimarioOScuro); /* Rojo */
+  color: white;
+  border: none;
+  
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 16px;
+  margin-top: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-cerrar:hover {
+  background-color: var(--Primario);
+}
+
+/* Títulos y texto dentro del modal */
+.modal-content h2 {
+  font-family: 'Staatliches', sans-serif;
+  font-size: 24px;
+  color: #333;
+  text-align: center;
+}
+
+.modal-content p {
+  font-size: 18px;
+  color: #555;
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* Animación para el modal */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: scale(0.9);
+  }
+  to {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+
+
+
+
+
+

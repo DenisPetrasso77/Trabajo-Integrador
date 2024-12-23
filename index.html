@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Franco Store</title>
+    <link  rel="stylesheet" href="CSS/Normalize.css" >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <link  rel="stylesheet" href="./CSS/Styles.css" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="./script.js" defer></script>
+
+</head>
+<body>
+
+    <!-- Modal (ventana emergente) -->
+<div id="modal-compra-exitosa" class="modal">
+    <div class="modal-content">
+        <span id="cerrar-modal" class="cerrar">&times;</span>
+        <h2>¡Compra Exitosa!</h2>
+        <p>Gracias por tu compra. ¡Esperamos verte pronto!</p>
+        <button id="cerrar-modal-btn" class="btn-cerrar">Cerrar</button>
+    </div>
+</div>
+
+<!-- Modal de advertencia cuando el carrito está vacío -->
+<div id="modal-carrito-vacio" class="modal">
+    <div class="modal-content">
+        <span id="cerrar-modal-carrito-vacio" class="cerrar">&times;</span>
+        <h2>El carrito está vacío</h2>
+        <p>Debes agregar productos al carrito antes de finalizar la compra.</p>
+    </div>
+</div>
+
+<!-- Resto de tu carrito -->
+<div id="carrito" class="carrito">
+    <h2><i class="fas fa-shopping-cart"></i> Carrito</h2>
+    <ul id="lista-carrito" class="lista-carrito"></ul>
+    <p id="total-carrito" class="total-carrito">Total: $0</p>
+    <button id="vaciar-carrito" class="btn-vaciar">Vaciar Carrito</button>
+    <button id="finalizar-compra" class="btn-finalizar">Finalizar Compra</button>
+</div>
+
+    
+
+    <header class="header">
+        <a href="Index.html"> 
+            <img class="header__logo" src="./img/logo.png" alt="Logotipo">
+        </a>
+    </header>
+
+    <nav class="navegacion">
+        <a class="navegacion__enlace navegacion__enlace--activo" href="./index.html">Tienda</a>
+        <a class="navegacion__enlace " href="./Producto.html">Producto</a>
+        <a class="navegacion__enlace" href="./Nosotros.html">Nosotros</a>
+        <a class="navegacion__enlace" href="./Contacto.html">Contacto</a>
+    </nav>
+    
+    <main class="contenedor">
+        <h1>Nuestros Productos</h1>
+    <div class="grid">
+        <div class="producto"><!--Inicio Producto-->
+            <a href="Producto.html">
+                <img class="producto__imagen" src="./img/1.jpg" alt="Imagen">
+                <div class="producto__informacion">
+                    <p class="producto__nombre">VueJS</p>
+                    <p class="producto__precio">$25</p>
+                    <button class="producto__boton" data-id="1">Agregar al carrito</button>
+                </div>
+            </a>
+        </div> <!--Fin Producto-->
+        <div class="producto"><!--Inicio Producto-->
+            <a href="Producto.html">
+                <img class="producto__imagen" src="./img/2.jpg" alt="Imagen">
+                <div class="producto__informacion">
+                    <p class="producto__nombre">Angular</p>
+                    <p class="producto__precio">$25</p>
+                    <button class="producto__boton" data-id="2">Agregar al carrito</button>
+                </div>
+            </a>
+        </div> <!--Fin Producto-->
+        <!-- Repite el bloque de producto para el resto de los productos -->
+        <div class="producto"><!--Inicio Producto-->
+            <a href="Producto.html">
+                <img class="producto__imagen" src="./img/3.jpg" alt="Imagen">
+                <div class="producto__informacion">
+                    <p class="producto__nombre">React</p>
+                    <p class="producto__precio">$25</p>
+                    <button class="producto__boton" data-id="3">Agregar al carrito</button>
+                </div>
+            </a>
+        </div> <!--Fin Producto-->
+        <div class="producto"><!--Inicio Producto-->
+            <a href="Producto.html">
+                <img class="producto__imagen" src="./img/4.jpg" alt="Imagen">
+                <div class="producto__informacion">
+                    <p class="producto__nombre">Redux</p>
+                    <p class="producto__precio">$25</p>
+                    <button class="producto__boton" data-id="4">Agregar al carrito</button>
+                </div>
+            </a>
+        </div> <!--Fin Producto-->
+            <div class="producto"><!--Inicio Producto-->
+                <a href="Producto.html">
+                    <img  class="producto__imagen"  src="./img/5.jpg" alt="Imagen">  
+                    <div class="producto__informacion">
+                        <p class="producto__nombre">Node</p>
+                        <p class="producto__precio">$25</p>
+                        <button class="producto__boton" data-id="5">Agregar al carrito</button>
+                    </div>
+                </a>
+            </div> <!--Fin Producto-->
+            <div class="producto"><!--Inicio Producto-->
+                <a href="Producto.html">
+                    <img  class="producto__imagen"  src="./img/6.jpg" alt="Imagen">  
+                    <div class="producto__informacion">
+                        <p class="producto__nombre">Sass</p>
+                        <p class="producto__precio">$25</p>
+                        <button class="producto__boton" data-id="6">Agregar al carrito</button>
+                    </div>
+                </a>
+            </div> <!--Fin Producto-->
+            <div class="producto"><!--Inicio Producto-->
+                <a href="Producto.html">
+                    <img  class="producto__imagen"  src="./img/7.jpg" alt="Imagen">  
+                    <div class="producto__informacion">
+                        <p class="producto__nombre">HTML5</p>
+                        <p class="producto__precio">$25</p>
+                        <button class="producto__boton" data-id="7">Agregar al carrito</button>
+                    </div>
+                </a>
+            </div> <!--Fin Producto-->
+            <div class="producto"><!--Inicio Producto-->
+                <a href="Producto.html">
+                    <img  class="producto__imagen"  src="./img/8.jpg" alt="Imagen">  
+                    <div class="producto__informacion">
+                        <p class="producto__nombre">Git</p>
+                        <p class="producto__precio">$25</p>
+                        <button class="producto__boton" data-id="8">Agregar al carrito</button>
+                    </div>
+                </a>
+            </div> <!--Fin Producto-->
+            <div class="producto"><!--Inicio Producto-->
+                <a href="Producto.html">
+                    <img  class="producto__imagen"  src="./img/9.jpg" alt="Imagen">  
+                    <div class="producto__informacion">
+                        <p class="producto__nombre">Bulma</p>
+                        <p class="producto__precio">$25</p>
+                        <button class="producto__boton" data-id="9">Agregar al carrito</button>
+                    </div>
+                </a>
+            </div> <!--Fin Producto-->
+            <div class="producto"><!--Inicio Producto-->
+                <a href="Producto.html">
+                    <img  class="producto__imagen"  src="./img/10.jpg" alt="Imagen">  
+                    <div class="producto__informacion">
+                        <p class="producto__nombre">TS</p>
+                        <p class="producto__precio">$25</p>
+                        <button class="producto__boton" data-id="10">Agregar al carrito</button>
+                    </div>
+                </a>
+            </div> <!--Fin Producto-->
+            <div class="producto"><!--Inicio Producto-->
+                <a href="Producto.html">
+                    <img  class="producto__imagen"  src="./img/11.jpg" alt="Imagen">  
+                    <div class="producto__informacion">
+                        <p class="producto__nombre">Drupal</p>
+                        <p class="producto__precio">$25</p>
+                        <button class="producto__boton" data-id="11">Agregar al carrito</button>
+                    </div>
+                </a>
+            </div> <!--Fin Producto-->
+            <div class="producto"><!--Inicio Producto-->
+                <a href="Producto.html">
+                    <img  class="producto__imagen"  src="./img/12.jpg" alt="Imagen">  
+                    <div class="producto__informacion">
+                        <p class="producto__nombre">JavaScript</p>
+                        <p class="producto__precio">$25</p>
+                        <button class="producto__boton" data-id="12">Agregar al carrito</button>
+                    </div>
+                </a>
+            </div> <!--Fin Producto-->
+            <div class="producto"><!--Inicio Producto-->
+                <a href="Producto.html">
+                    <img  class="producto__imagen"  src="./img/13.jpg" alt="Imagen">  
+                    <div class="producto__informacion">
+                        <p class="producto__nombre">GrapQL</p>
+                        <p class="producto__precio">$25</p>
+                        <button class="producto__boton" data-id="13">Agregar al carrito</button>
+                    </div>
+                </a>
+            </div> <!--Fin Producto-->
+            <div class="producto"><!--Inicio Producto-->
+                <a href="Producto.html">
+                    <img  class="producto__imagen"  src="./img/14.jpg" alt="Imagen">  
+                    <div class="producto__informacion">
+                        <p class="producto__nombre">WordPress</p>
+                        <p class="producto__precio">$25</p>
+                        <button class="producto__boton" data-id="14">Agregar al carrito</button>
+                    </div>
+                </a>
+            </div> <!--Fin Producto-->
+
+            <div class="grafico grafico--camisas"></div>
+            <div class="grafico grafico--node"></div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p class="footer__texto">Front End Store - Todos los derechos Reservados</p>
+    </footer>
+</body>
+</html>
