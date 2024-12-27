@@ -739,5 +739,14 @@ button:hover {
 }
 
 
+/*--------------------*/
+
+
+@media (max-width: 576px) { /* Ajuste para móviles */
+  .carrito {
+      width: 50%; /* 1 por fila */
+      top: 700px;
+  }
+}
 
 
