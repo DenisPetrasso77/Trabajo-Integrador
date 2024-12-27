@@ -5,16 +5,14 @@
     --SecundarioOscuro: #d4ac0d  ;
     --Blanco: #FFF;
     --Negro: #000;
-
     --FuentePrincipal: "Staatliches", cursive;
-    
-
 }
 
 html {
     box-sizing: border-box;
     font-size: 65.5%;
   }
+  
   *, *:before, *:after {
     box-sizing: inherit;
   }
@@ -43,6 +41,7 @@ html {
      text-decoration: none;
 
   }
+
   img {
    width: 100%;
   }
@@ -52,6 +51,7 @@ html {
   }
 
   h1,h2,h3 {
+
     text-align: center;
     color: var(--Secundario);
     font-family: var(--FuentePrincipal);
@@ -66,6 +66,7 @@ html {
   h3 {
     font-size: 2.4rem;
   }
+
 /** header**/
 .header {
     display: flex;
@@ -73,18 +74,19 @@ html {
 }
 
 .header__logo{
+
     margin: 3rem 0;
 }
+
 .footer{
 
 background-color: var(--PrimarioOScuro);
 padding: 1rem 0;
 margin-top: 2rem;
-
-
 }
 
 .footer__texto{
+
 font-family: var(--FuentePrincipal);
 text-align: center;
 font-size: 2.2rem;
@@ -124,7 +126,6 @@ gap: 2rem;
     }
 }
 
-
 /**Productos**/
 
 .producto {
@@ -150,8 +151,6 @@ line-height: 1.2;
 
 }
 
-
-
 .grafico {
 min-height: 30rem;
 grid-column: 1 / 3;
@@ -159,16 +158,6 @@ background-repeat: no-repeat;
 background-size: cover;
 }
 
-.grafico--camisas {
- grid-row: 2 / 3;
- 
- background-image: url(../img/grafico1.jpg);
-}
-.grafico--node {
-  background-image: url(../img/grafico2.jpg);
- 
-  grid-row: 8 / 9;
-}
 
 @media (min-width: 768px) {
   .grafico--node {
@@ -192,13 +181,21 @@ background-size: cover;
     column-gap: 2rem;
     
     }
-    
 }
 
 .nosotros__imagen {
   grid-row: 1 / 2;
  
   }
+  .nosotros p {
+    font-size: 2.5rem; 
+    color: var(--Blanco); 
+    font-family: 'Poppins', sans-serif;
+    text-align: justify; 
+    padding: 0 10px; /* espacio alrededor del texto para evitar que toque los bordes */
+
+}
+
 
 @media (min-width: 768px) {
   .nosotros__imagen {
@@ -206,6 +203,7 @@ background-size: cover;
     width: 100%;
     }
   }    
+  
 /**Bloques**/
 
   .bloques{
@@ -214,6 +212,7 @@ background-size: cover;
   gap: 2 rem;
 
   }
+
 @media (min-width: 768px) {
   .bloques{
     grid-template-columns: repeat(4,1fr);
@@ -227,53 +226,6 @@ background-size: cover;
 
 .bloque__titulo{
   margin: 0;
-}
-
-/**Pagina Producto**/
-
-@media (min-width: 768px) {
-    .camisa {
-      display: grid;
-      grid-template-columns: repeat(2,1fr);
-      column-gap: 2rem;
-    } 
-}
-
-.formulario {
-  display: flex;
-  flex-wrap: wrap; /* Permite que los elementos se ajusten si el espacio no es suficiente */
-  gap: 2rem;
-  width: 50%; /* Reduce el ancho al 50% del contenedor */
-  margin: 0 auto; /* Centra horizontalmente */
-}
-
-.formulario__campo {
-  border: 1rem solid var(--PrimarioOScuro);
-  background-color: transparent;
-  color: var(--Blanco);
-  font-size: 2rem;
-  font-family: Arial, Helvetica, sans-serif;
-  padding: 1rem;
-  appearance: none;
-  flex: 1 1 calc(50% - 2rem); /* Cada campo ocupa la mitad del ancho disponible menos el espacio del gap */
-}
-
-
-.formulario__submit{
- 
-  background-color: var(--Secundario);
-  border: none;
-  font-size: 2rem;
-  font-family: var(--FuentePrincipal);
-  padding: 2rem;
-  transition: background-color .3s ease;
-  grid-column: 1 / 3;
-
-}
-
-.formulario__submit:hover {
-  cursor: pointer;
-  background-color: var(--SecundarioOscuro);
 }
 
 /** Contacto**/
@@ -356,12 +308,12 @@ button:hover {
 
 
 
-/* Estilo para el contenedor principal del carrito */
+/*contenedor principal del carrito */
 .carrito {
   background-color: #f9f9f9;
   border-radius: 10px;
   padding: 15px;
-  width: 250px; /* Más pequeño */
+  width: 250px; 
   position: fixed; /* Para que se quede fijo en la pantalla */
   right: 20px; /* Lo mueve a la derecha */
   top: 20px; /* Un poco de margen desde la parte superior */
@@ -371,18 +323,18 @@ button:hover {
 
 /* Estilo para el título del carrito */
 .carrito h2 {
-  text-align: left; /* Alineamos a la izquierda */
+  text-align: left; 
   color: #333;
-  font-size: 20px; /* Hacemos el texto un poco más pequeño */
+  font-size: 20px; 
   margin-bottom: 15px;
 }
 
 .carrito h2 i {
   margin-right: 8px; /* Espaciado entre el ícono y el texto */
-  color: var(--PrimarioOScuro); /* Color para el ícono */
+  color: var(--PrimarioOScuro); 
 }
 
-/* Estilo para la lista de productos */
+
 .lista-carrito {
   list-style-type: none;
   padding: 0;
@@ -401,7 +353,6 @@ button:hover {
   font-size: 14px;
 }
 
-/* Estilo para el total del carrito */
 .total-carrito {
   font-size: 16px;
   font-weight: bold;
@@ -410,7 +361,6 @@ button:hover {
   margin-bottom: 15px;
 }
 
-/* Estilo para el botón de vaciar el carrito */
 .btn-vaciar {
   width: 100%;
   padding: 8px;
@@ -427,16 +377,14 @@ button:hover {
   background-color: #FF5733;
 }
 
-/* Agregar algo de estilo a los elementos de la lista */
 .lista-carrito li span {
   font-size: 12px;
   color: #888;
 }
-/* Estilo para el botón de finalizar compra */
 .btn-finalizar {
   width: 100%;
   padding: 10px;
-  background-color: #28a745; /* Un verde para indicar éxito */
+  background-color: #28a745; 
   border: none;
   color: white;
   font-size: 16px;
@@ -492,17 +440,20 @@ button:hover {
 
 /* Botón de cerrar modal */
 .btn-cerrar {
-  background-color: var(--PrimarioOScuro); /* Rojo */
+  background-color: var(--PrimarioOScuro);
   color: white;
   border: none;
-  
   padding: 10px 20px;
   text-align: center;
   font-size: 16px;
   margin-top: 20px;
   border-radius: 5px;
   cursor: pointer;
+  display: block; 
+  margin-left: auto; 
+  margin-right: auto;
 }
+
 
 .btn-cerrar:hover {
   background-color: var(--Primario);
@@ -536,6 +487,256 @@ button:hover {
 }
 
 
+/* Contenedor principal de productos con Flexbox */
+.productos-contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* Estilos para la card */
+.card {
+  background-color: var(--PrimarioOScuro);
+  padding: 1rem;
+  width: calc(33.33% - 2rem); /* 3 por fila en pantallas grandes */
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card a{
+  display: block; 
+  color: inherit; 
+  text-decoration: none; 
+}
+
+.card__imagen {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px 8px 0 0;
+  display: block; 
+}
+
+.card__informacion {
+  padding: 1rem;
+}
+
+.card__nombre {
+  font-size: 2.4rem;
+  font-family: var(--FuentePrincipal);
+  color: var(--Blanco);
+  margin-bottom: 0.5rem;
+}
+
+.card__precio {
+  font-size: 2rem;
+  color: var(--Secundario);
+  font-family: var(--FuentePrincipal);
+}
+.card__boton{
+  width: 100%; /* El botón ocupa todo el ancho de la card */
+  margin-top: 1rem;
+}
+
+/* Media queries para responsividad */
+@media (max-width: 992px) { /* Ajuste para pantallas medianas */
+  .card {
+      width: calc(50% - 2rem); /* 2 por fila */
+  }
+}
+
+@media (max-width: 768px) { /* Ajuste para tablets */
+  .card {
+      width: calc(50% - 2rem); /* 2 por fila */
+  }
+}
+
+@media (max-width: 576px) { /* Ajuste para móviles */
+  .card {
+      width: 100%; /* 1 por fila */
+  }
+}
+
+/* Oculta el grid anterior */
+.grid {
+  display: none;
+}
+.producto{
+  display: none;
+}
+
+
+
+
+.beneficios {
+  margin-top: 2rem;
+  padding: 2rem;
+  background-color: var(--PrimarioOScuro); 
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  border: 2px solid #f39c12; 
+}
+
+.beneficios h2 {
+  font-size: 2rem; 
+  margin-bottom: 1rem;
+  text-align: center;
+  color: var(--Secundario); 
+  font-family: 'Arial', sans-serif;
+  text-transform: uppercase; 
+  letter-spacing: 0.05rem; 
+}
+
+.beneficios__lista {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-size: 1.8rem; 
+  color: var(--Secundario); 
+}
+
+.beneficios__lista li {
+  margin-bottom: 1.5rem; /* Mayor espacio entre elementos */
+  position: relative;
+  padding-left: 2rem; /* Espacio para el ícono */
+  font-weight: bold; /* Letras en negrita */
+}
+
+.beneficios__lista li::before {
+    content: "\f058"; /* Unicode del icono de check en Font Awesome */
+    font-family: 'Font Awesome 6 Free'; /* Fuente de Font Awesome */
+    font-weight: 900; /* Negrita para que se vea bien */
+    position: absolute;
+    left: 0;
+    color: #2ecc71; /* Verde moderno */
+    font-size: 1.8rem; /* Tamaño del ícono */
+}
+
+/* Sección de Reseñas */
+.reseñas {
+  background-color: var(--PrimarioOScuro); 
+  padding: 4rem 2rem;
+  margin-top: 2rem;
+  border-radius: 10px;
+}
+
+.reseñas h2 {
+  font-family: var(--FuentePrincipal);
+  color: var(--Secundario);
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.reseñas__lista {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+}
+
+.reseña {
+  background-color: var(--Blanco);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.reseña__autor-contenedor {
+  display: flex;
+  align-items: center; /* Para que la imagen y el texto estén alineados */
+  gap: 1.5rem; /* Espaciado entre la imagen y el texto */
+}
+
+.reseña__imagen {
+    width: 120px; 
+    height: 120px; 
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    object-fit: cover; /* Para que la imagen se ajuste bien dentro del círculo sin distorsionarse */
+}
+
+.reseña__autor {
+  font-size: 2rem;
+  color: var(--Secundario);
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.reseña__texto {
+  font-size: 1.8rem;
+  color: var(--Negro);
+  line-height: 1.5;
+  text-align: center;
+}
+
+.reseña__fecha {
+  font-size: 1.4rem;
+  color: #888;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+@media (min-width: 768px) {
+  .reseñas__lista {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+@media (min-width: 1200px) {
+  .reseñas__lista {
+    grid-template-columns: repeat(3, 1fr); 
+  }
+}
+
+.producto {
+  display: flex;
+  align-items: center;
+  margin: 2rem auto;
+  text-align: center;
+  max-width: 800px;
+}
+
+.producto__detalles {
+  display: flex;
+  flex-direction: row; 
+  justify-content: center; 
+  gap: 2rem; 
+  margin-top: 2rem;
+}
+
+.producto__imagen {
+  width: 40%; 
+  height: auto;
+  border-radius: 10px;
+  border: 10px solid var(--PrimarioOScuro);
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.producto__info {
+  max-width: 600px;
+  text-align: center;
+}
+
+.producto__descripcion {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+  color: var(--Blanco);
+  line-height: 1.8;
+  padding: 0 10px;
+  width: 100%;
+  text-align: justify; 
+ 
+}
 
 
 

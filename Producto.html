@@ -10,87 +10,54 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
     <link  rel="stylesheet" href="./CSS/Styles.css" >
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="./script.js" defer></script>
 
 </head>
 <body>
-
-        <!-- Modal (ventana emergente) -->
-<div id="modal-compra-exitosa" class="modal">
-    <div class="modal-content">
-        <span id="cerrar-modal" class="cerrar">&times;</span>
-        <h2>¡Compra Exitosa!</h2>
-        <p>Gracias por tu compra. ¡Esperamos verte pronto!</p>
-        <button id="cerrar-modal-btn" class="btn-cerrar">Cerrar</button>
-    </div>
-</div>
-
-<!-- Modal de advertencia cuando el carrito está vacío -->
-<div id="modal-carrito-vacio" class="modal">
-    <div class="modal-content">
-        <span id="cerrar-modal-carrito-vacio" class="cerrar">&times;</span>
-        <h2>El carrito está vacío</h2>
-        <p>Debes agregar productos al carrito antes de finalizar la compra.</p>
-    </div>
-</div>
-
-
-<!-- Resto de tu carrito -->
-<div id="carrito" class="carrito">
-    <h2><i class="fas fa-shopping-cart"></i> Carrito</h2>
-    <ul id="lista-carrito" class="lista-carrito"></ul>
-    <p id="total-carrito" class="total-carrito">Total: $0</p>
-    <button id="vaciar-carrito" class="btn-vaciar">Vaciar Carrito</button>
-    <button id="finalizar-compra" class="btn-finalizar">Finalizar Compra</button>
-</div>
 
     <header class="header">
         <a href="Index.html"> 
             <img class="header__logo" src="./img/logo.png" alt="Logotipo">
         </a>
     </header>
-
-    <nav class="navegacion">
+    
+     <nav class="navegacion">
         <a class="navegacion__enlace navegacion__enlace--activo" href="./index.html">Tienda</a>
-        <a class="navegacion__enlace " href="./Producto.html">Producto</a>
         <a class="navegacion__enlace" href="./Nosotros.html">Nosotros</a>
+        <a class="navegacion__enlace" href="./Reseñas.html">Reseñas</a>
         <a class="navegacion__enlace" href="./Contacto.html">Contacto</a>
     </nav>
     
-    <main class="contenedor">
-        <h1>React JS</h1>
-        <div class="camisa">
-            <img class="camisa__imagen" src="./img/3.jpg" alt="imagen del producto">
-
-            <div class="camisa__contenido">
-                <p>
-                    ¡Descubre la camiseta perfecta para cada momento!
-                    Nuestra colección de remeras está diseñada para ofrecerte comodidad y estilo en cada ocasión. Ya sea que estés buscando un look casual para el día a día, o una prenda original que hable de tu personalidad, aquí encontrarás la opción ideal. 
-                </p>
-                
-                <div class="producto__informacion">
-                    <p class="producto__nombre">VueJS</p>
-                    <p class="producto__precio">$25</p>
-                    <button class="producto__boton" data-id="1">Agregar al carrito</button>
+    <main>
+        <section>
+            <h1 class="producto__titulo">Productos</h1>
+            <div class="producto__detalles">
+                <img class="producto__imagen" src="./img/grafico1.jpg" alt="Imagen del Producto">
+                <div class="producto__info">
+                    <p class="producto__descripcion">
+                        Descubre nuestro productos de la mejor calidad del mercado!!! 
+                        Elaborado con los mejores materiales, ideal para uso diario y perfecto para cualquier ocasión. ¡No te lo pierdas! Suma ya a tu carrito !
+                    </p>
                 </div>
-
-                <form class="formulario">
-                        <select class="formulario__campo">
-                            <option disabled selected>----Seleccionar Talla----</option>
-                            <option>Chica</option>
-                            <option>Mediana</option>
-                            <option>Grande</option>
-                        </select>
-                     </form>
-
-                    
             </div>
-            
-        </div>
-        
+        </section>
+    
+        <section class="beneficios">
+            <h2>Beneficios de comprar con nosotros</h2>
+            <ul class="beneficios__lista">
+                <li>Envíos gratuitos a todo el país</li>
+                <li>Atención al cliente 24/7</li>
+                <li>Descuentos exclusivos para miembros</li>
+                <li>Productos de alta calidad garantizada</li>
+                <li>Devoluciones fáciles y rápidas</li>
+            </ul>
+        </section>
     </main>
-
-    <footer>
-        <p class="footer__texto">Front End Store - Todos los derechos Reservados</p>
+    
+    <footer class="footer">
+        <p class="footer__texto">Front End Store - 2024 Todos los derechos Reservados</p>
     </footer>
 </body>
+</html>
